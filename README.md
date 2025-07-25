@@ -42,9 +42,74 @@ All algorithms were implemented from scratch and optimized for correctness, effi
 
 ---
 
-## 📸 Screenshots / Diagrams (optional)
+## 📸 Screenshots / Diagrams
+### Hua Rong Dao
+```
+11.^  
+112v  
+.^<>  
+2v<>  
+22<>
+```
+* 1 denotes 2x2 piece
+* 2 denotes 1x1 piece
+* <> denotes 1x2 horizontal piece
+* ^v denotes 1x2 vertical piece
+* . denotes empty space
 
-> *You can add visuals here for board representations or search trees.*
+### Checkers
+```
+........  
+....b...  
+.......R  
+..b.b...  
+...b...r  
+........  
+...r....  
+....B...
+```
+* . (the period character) denotes an empty square
+* r denotes a red piece
+* b denotes a black piece
+* R denotes a red king
+* B denotes a black king
+
+### Battleship Solitaire
+INPUT FILE:  
+```
+211222  
+140212  
+32100  
+000000  
+0000S0  
+000000  
+000000  
+00000.  
+000000
+```
+* The first line describes the row constraints as a string of N numbers.
+* The second line describes the column constraints as a string of N numbers.
+* The third line describes the number of each type of ship.
+* The remaining lines will be an NxN grid representing the initial layout of the puzzle.
+  * 0 represents no hint for that square
+  * S represents a submarine
+  * . represents water
+
+
+OUTPUT FILE (Solved Board):  
+```
+<>....  
+....S.  
+.^....  
+.M...S  
+.v.^..  
+...v.S
+```
+* < represents the left end of a horizontal ship
+* \> represents the right end of a horizontal ship
+* ^ represents the top end of a vertical ship
+* v (lower-cased letter v) represents the bottom end of a vertical ship
+* M represents a middle segment of a ship (horizontal or vertical)
 
 ---
 
@@ -62,9 +127,6 @@ All algorithms were implemented from scratch and optimized for correctness, effi
 ```bash
 # clone the repo
 https://github.com/Dam-Sam/board-game-ai.git
-
-# cd into the project
-git clone https://github.com/Dam-Sam/board-game-ai.git
 cd board-game-ai
 
 # Run one of the solvers (examples):
